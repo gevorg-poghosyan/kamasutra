@@ -10,21 +10,8 @@
 
 }
 
-.header{
-grid-area: h;
-background-color: green;
-}
-.header img{
-    width: 20px;
-}
 
-.nav{
-background-color: cadetblue;    
-grid-area: n;
-}
 
-.content{
-    background-color: chocolate;
-    grid-area: c;
 
-}
+
+

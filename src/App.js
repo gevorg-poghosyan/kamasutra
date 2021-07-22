@@ -1,40 +1,33 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import Navbar from './components/Navbar/Navbar';
+import Profile from './components/Profile/Profile';
+import DialogsContainer from './components/Dialogs/DialogsContainer';
+import News from './components/News/News';
+import { Route } from 'react-router-dom';
+import UsersContanier from './components/Users/UsersContanier';
 
 
-const App = () =>{
+
+const App = (props) => {
+    debugger;
     return (
-        <div className='app-wrapper'>
-            <header className='header'>
-                <img src=''/>
-            </header>
-            <nav className='nav'>
-                <div>
-                    <a>Profile</a>
-                    </div>
-                <div>
-                    <a>Messages</a>
-                    
-                    </div>
-                    <div>
-                        <a>News</a>
-                    </div>
-                    <div>
-                        <a>Music</a>
-                    </div>
-                    <div>
-                        <a>Settings</a>
-                    </div>
-                </nav>
-            <div className='content'>
-                    
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZA6crfW5TG98Miwu5LNO6_JwgdGdR7QTRIA&usqp=CAU"></img>
-                    
-                </div>
-            
-        </div>);
-    
+                <div className='app-wrapper'>
+            <Header />
+            <Navbar />
+            <Route path = '/news' component = {News}/>
+            <Route path = '/dialogs' 
+                          render = { () => <DialogsContainer />} />
+                            
+            <Route path = '/profile' 
+                          render = { () => <Profile />} />
 
+            <Route path = '/users'
+                          render = {() => <UsersContanier/>} />
+            
+        </div>
+        );
 }
 
 

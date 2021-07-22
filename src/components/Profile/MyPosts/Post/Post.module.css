@@ -1,0 +1,13 @@
+
+.item{
+    color: whitesmoke;
+    padding: 10px;
+}
+.item.active{
+    color:blue;
+}
+.item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
